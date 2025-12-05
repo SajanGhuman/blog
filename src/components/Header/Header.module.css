@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   height: var(--header-height);
   width: 100%;
