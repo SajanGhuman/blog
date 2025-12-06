@@ -6,4 +6,5 @@
   max-width: var(--content-width);
   padding: 64px var(--viewport-padding);
   margin: 0 auto;
+  padding-top: 160px;
 }

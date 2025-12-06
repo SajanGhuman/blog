@@ -1,21 +1,30 @@
 import { blog } from "../../blogs.js";
 import styles from "./BlogGrid.module.css";
+import { ArrowRight } from "react-feather";
+import Link from "next/link";
 
 type BlogGridType = {
   title: string;
-  shortDesc?: string;
+  date?: string;
   desc: string;
 };
 function BlogGrid() {
   {
-    return blog.map(({ title, shortDesc, desc }: BlogGridType) => (
+    return blog.map(({ title, date, desc }: BlogGridType) => (
       <div key={title} className={styles.grid_item}>
-        <div>
-          <b>{title}</b>
-        </div>
-        <div>{shortDesc}</div>
+        <Link href={`/blog/${title.replace(/\s/g, "-").toLowerCase()}`}>
+          <div>
+            <b>{title}</b>
+          </div>
+        </Link>
+        {/* <time>{date}</time> */}
         <div>{desc}</div>
-        <p>Read more</p>
+        <Link href={`/blog/${title.replace(/\s/g, "-").toLowerCase()}`}>
+          Read more
+          <span>
+            <ArrowRight />
+          </span>
+        </Link>
       </div>
     ));
   }

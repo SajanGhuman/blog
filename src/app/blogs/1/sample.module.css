@@ -1,0 +1,19 @@
+.heading {
+  display: flex;
+  padding: 64px var(--viewport-padding) 32px;
+  flex-direction: column;
+  gap: 1rem;
+}
+.heading time {
+  color: var(--color-decorative-800);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 64px var(--viewport-padding) 32px;
+  border-radius: 8px;
+  background: var(--color-page-background);
+  margin: 0px auto;
+  box-shadow: var(--shadow-page);
+}

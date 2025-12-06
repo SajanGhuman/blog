@@ -43,13 +43,14 @@ h6 {
 
 /* THEME VARIABLES */
 html {
-  --content-width: 55rem;
+  --content-width: 68.75rem;
   --outer-content-width: 80rem;
-  --viewport-padding: 16px;
+  --viewport-padding: 32px;
   --header-height: 5rem;
   --trimmed-content-width: calc(
     var(--content-width) - var(--viewport-padding) * 2
   );
+  --grayed-out-text: #9ca8b4;
 }
 
 @media (min-width: 35rem) {
