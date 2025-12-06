@@ -13,10 +13,10 @@ export default function Sample() {
         <p>
           When I was first learning to code, I remember finding the Modulo
           operator (%) extremely confusing. 😬
-        </p>
-        <p>
-          If you don't understand what it's doing, the values it produces seem
-          completely random:
+          <p>
+            If you don't understand what it's doing, the values it produces seem
+            completely random:
+          </p>
         </p>
       </div>
     </>
