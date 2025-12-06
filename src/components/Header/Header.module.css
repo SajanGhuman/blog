@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
   height: var(--header-height);
   width: 100%;
@@ -11,11 +11,16 @@
   margin-right: auto;
 }
 
+.wrapper h1{
+  cursor: pointer;
+}
+
 .actions {
   display: flex;
   gap: 16px;
   align-items: center;
 }
+
 .action {
   display: block;
   border: none;

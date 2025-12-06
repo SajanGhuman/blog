@@ -1,12 +1,19 @@
 import styles from "./sample.module.css";
+import { format } from "date-fns";
+import { BlogGridType } from "../index";
 
-export default function Sample() {
+type Props = {
+  metadata: BlogGridType;
+};
+
+export default function Sample({ metadata }: Props) {
+  let { title, slug, date, desc } = metadata;
   return (
     <>
       <div className={styles.heading}>
-        <h1>Understanding the JavaScript Modulo Operator</h1>
+        <h1>This is a sample heading</h1>
         <time>
-          Published on <b>September 6th, 2023</b>
+          Published on {date ? format(new Date(date), "MMMM do, yyyy") : ""}
         </time>
       </div>
       <div className={styles.content}>
@@ -16,7 +23,7 @@ export default function Sample() {
         </p>
         <p>
           If you don't understand what it's doing, the values it produces seem
-          completely random:
+          completely random.
         </p>
       </div>
     </>
