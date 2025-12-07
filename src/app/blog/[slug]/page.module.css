@@ -1,10 +1,8 @@
 .wrapper {
-  display: grid;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: var(--content-width);
-  padding: 64px var(--viewport-padding);
-  margin: 0 auto;
-  padding-top: 160px;
+  gap: 80px;
 }

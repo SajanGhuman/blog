@@ -1,7 +1,4 @@
 .grid_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border: #373d43 1px solid;
   border-radius: 10px;
   padding: 32 27 32 25;
@@ -11,10 +8,6 @@
   font-size: 1.25rem;
 }
 
-/* .grid_item :nth-child(2) { */
-/*   color: var(--color-grid-secondary); */
-/* } */
-
 .grid_item :nth-child(3) {
   margin: 1rem 0;
 }
@@ -22,6 +15,7 @@
 .grid_item a {
   font-size: 1rem;
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   width: fit-content;
   gap: 0.5rem;
@@ -35,9 +29,13 @@
 }
 
 .grid_item a:hover {
-  border-color: white;
+  border-color: var(--color-text);
   transform: translateY(-10px);
 }
 .grid_item a:first-child {
   transform: translateY(0);
+}
+
+.grid_item div {
+  width: 100%;
 }
