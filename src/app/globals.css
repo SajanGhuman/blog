@@ -51,7 +51,7 @@ h6 {
 html {
   --content-width: 68.75rem;
   --outer-content-width: 80rem;
-  --viewport-padding: 2px;
+  --viewport-padding: 24px;
   --header-height: 5rem;
   --trimmed-content-width: calc(
     var(--content-width) - var(--viewport-padding) * 2
