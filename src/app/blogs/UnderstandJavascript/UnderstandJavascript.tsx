@@ -4,7 +4,7 @@ import { BlogGridType } from "../index";
 import { Sandpack } from "@codesandbox/sandpack-react";
 import { amethyst } from "@codesandbox/sandpack-themes";
 import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
-import { Link } from "react-feather";
+import Link from "next/link";
 
 type Props = {
   metadata: BlogGridType;
@@ -38,6 +38,14 @@ console.log(y === {});`;
 console.log(x === "One"); //true
 const y = {};
 console.log(y === {}); //false`;
+
+  let code2 = `console.log(typeof(2));
+console.log(typeof("hello"));
+console.log(typeof(undefined));`;
+
+  let ans2 = `console.log(typeof(2)); // "number"
+console.log(typeof("hello")); // "string"
+console.log(typeof(undefined)); // "function"`;
 
   return (
     <>
@@ -83,7 +91,7 @@ console.log(y === {}); //false`;
           maxLength={200}
         ></textarea>
         <p>Drumroll...🥁🥁🥁🥁🥁</p>
-        <h1>Solution:</h1>
+        <h1>Solution</h1>
         <CodeSnippet lang="js">{ans1}</CodeSnippet>
         <p>
           If you have been working for a while with JavaScript, you might not be
@@ -103,6 +111,17 @@ console.log(y === {}); //false`;
           </Link>
           🐛
         </p>
+        <p>
+          We will circle back to this, but first lets understand the basics.
+        </p>
+        <h1>The Basics</h1>
+        <p>Do me a favor and logs these values on your browser console.</p>
+        <CodeSnippet lang="js">{code2}</CodeSnippet>
+        <p>
+          I am gonna tell you the results, but believe me, you will learn so
+          much more if you do it yourself 🙂
+        </p>
+        <CodeSnippet lang="js">{ans2}</CodeSnippet>
       </div>
     </>
   );
