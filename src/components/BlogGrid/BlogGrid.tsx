@@ -15,7 +15,7 @@ function BlogGrid() {
   {
     return blog.map(({ title, date, desc, slug }: BlogGridType) => (
       <div key={title} className={styles.grid_item}>
-        <Link href={`/blog/${title.replace(/\s/g, "-").toLowerCase()}`}>
+        <Link href={`/blog/${slug}`}>
           <div>
             <b>{title}</b>
           </div>

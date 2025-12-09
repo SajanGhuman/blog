@@ -1,4 +1,4 @@
-import Sample from "./sample/sample";
+import UnderstandingJavascript from "./UnderstandJavascript/UnderstandJavascript";
 
 export type BlogGridType = {
   title: string;
@@ -11,5 +11,5 @@ export const blogComponents: Record<
   string,
   React.FC<{ metadata: BlogGridType }>
 > = {
-  sample: Sample,
+  UnderstandingJavascript: UnderstandingJavascript,
 };

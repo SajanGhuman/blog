@@ -1,8 +1,8 @@
 export const blog = [
   {
-    title: "sample",
-    slug: "sample",
-    date: "2023-09-02t12:00:00-0400",
-    desc: "this is a sample description to check how well the component behaves with long string",
+    title: "Understanding Javascript",
+    slug: "UnderstandingJavascript",
+    date: "2025-12-09t12:00:00-0400",
+    desc: "Learn how javascript works under the hood. The do's and dont's",
   },
 ];

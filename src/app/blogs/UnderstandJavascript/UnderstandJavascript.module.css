@@ -93,3 +93,20 @@
   /* width: fit-content; */
   padding: 0 32px;
 }
+
+.spacer {
+  margin-top: 20px;
+}
+.sandpackWrapper {
+  border: 2px solid var(--color-page-border);
+  border-radius: 10px;
+}
+
+.content textarea {
+  background-color: black;
+  border: 2px solid var(--color-page-border);
+  color: white;
+  padding: 22px;
+  margin-left: -22.5px;
+  margin-bottom: 22px;
+}

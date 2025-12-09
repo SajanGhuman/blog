@@ -2,6 +2,7 @@
   border: #373d43 1px solid;
   border-radius: 10px;
   padding: 32 27 32 25;
+  background-color:black
 }
 
 .grid_item :nth-child(1) {
@@ -19,21 +20,23 @@
   position: relative;
   width: fit-content;
   gap: 0.5rem;
-  border-bottom: 1px solid transparent;
   text-decoration: none;
   transition:
     transform 1s ease,
     border-color 1s ease;
   transform: translateY(0);
   cursor: pointer;
+  border-bottom: 1px solid #ffd500;
 }
 
 .grid_item a:hover {
-  border-color: var(--color-text);
   transform: translateY(-10px);
+  color: #ffd500;
 }
+
 .grid_item a:first-child {
   transform: translateY(0);
+  border-bottom: 1px solid transparent;
 }
 
 .grid_item div {
