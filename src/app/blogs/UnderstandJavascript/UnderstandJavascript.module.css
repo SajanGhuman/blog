@@ -26,6 +26,10 @@
   max-width: 1200px;
 }
 
+.content h1 {
+  color: var(--color-decorative-800);
+}
+
 @media (max-width: 1280px) {
   .content {
     width: 80%;
@@ -109,4 +113,10 @@
   padding: 22px;
   margin-left: -22.5px;
   margin-bottom: 22px;
+}
+.content img {
+  margin-bottom: 20px;
+}
+.special {
+  color: var(--color-decorative-800);
 }
