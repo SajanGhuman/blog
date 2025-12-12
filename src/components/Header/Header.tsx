@@ -7,9 +7,7 @@ import { useRouter } from "next/navigation";
 
 import {
   COLOR_THEME_COOKIE_NAME,
-  LIGHT_TOKENS,
   DARK_TOKENS,
-  DRACULA_COLORS,
   RETRO_COLORS,
 } from "@/constants";
 
@@ -36,7 +34,7 @@ function Header({ initialTheme, className, ...delegated }: HeaderProps) {
 
     root.setAttribute("data-color-theme", newTheme);
     Object.entries(newTokens).forEach(([key, value]) => {
-      root.style.setProperty(key, value as string);
+      root.style.setProperty(key, value);
     });
   }
 

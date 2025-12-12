@@ -2,12 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Work_Sans, Spline_Sans_Mono } from "next/font/google";
 import { cookies } from "next/headers";
-import {
-  LIGHT_COLORS,
-  DARK_COLORS,
-  RETRO_COLORS,
-  DRACULA_COLORS,
-} from "../constants.js";
+import { DARK_COLORS, RETRO_COLORS } from "../constants";
 import Header from "../components/Header/Header";
 import clsx from "clsx";
 
@@ -36,18 +31,14 @@ export default async function RootLayout({
 }>) {
   const savedTheme = (await cookies()).get("color-theme");
   const theme: string = savedTheme?.value || "dark";
-  const themeColors = theme === "light" ? RETRO_COLORS : DARK_COLORS;
+  // const themeColors = theme === "light" ? RETRO_COLORS : DARK_COLORS;
 
   return (
     <html
       lang="en"
       className={clsx(mainFont.variable, monoFont.variable)}
       data-color-theme={theme}
-      style={
-        theme === "light"
-          ? (RETRO_COLORS as React.CSSProperties)
-          : (DARK_COLORS as React.CSSProperties)
-      }
+      style={theme === "light" ? RETRO_COLORS : DARK_COLORS}
     >
       <body>
         <Header initialTheme={theme} />
