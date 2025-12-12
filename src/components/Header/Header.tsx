@@ -15,7 +15,12 @@ import {
 
 import styles from "./Header.module.css";
 
-function Header({ initialTheme, className, ...delegated }) {
+interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
+  initialTheme: string;
+  className?: string;
+}
+
+function Header({ initialTheme, className, ...delegated }: HeaderProps) {
   const [theme, setTheme] = React.useState(initialTheme);
   const router = useRouter();
   function handleToggleTheme() {
@@ -31,7 +36,7 @@ function Header({ initialTheme, className, ...delegated }) {
 
     root.setAttribute("data-color-theme", newTheme);
     Object.entries(newTokens).forEach(([key, value]) => {
-      root.style.setProperty(key, value);
+      root.style.setProperty(key, value as string);
     });
   }
 

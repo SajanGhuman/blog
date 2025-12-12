@@ -43,7 +43,11 @@ export default async function RootLayout({
       lang="en"
       className={clsx(mainFont.variable, monoFont.variable)}
       data-color-theme={theme}
-      style={theme === "light" ? RETRO_COLORS : DARK_COLORS}
+      style={
+        theme === "light"
+          ? (RETRO_COLORS as React.CSSProperties)
+          : (DARK_COLORS as React.CSSProperties)
+      }
     >
       <body>
         <Header initialTheme={theme} />
