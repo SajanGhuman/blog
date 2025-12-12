@@ -1,4 +1,4 @@
-import styles from "./UnderstandJavascript.module.css";
+import styles from "./UnderstandPrimitives.module.css";
 import { format } from "date-fns";
 import { BlogGridType } from "../index";
 import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
@@ -9,7 +9,7 @@ type Props = {
   metadata: BlogGridType;
 };
 
-export default function UnderstandingJavascript({ metadata }: Props) {
+export default function UnderstandingPrimitives({ metadata }: Props) {
   let { title, date } = metadata;
 
   const files = {

@@ -1,4 +1,4 @@
-import UnderstandingJavascript from "./UnderstandJavascript/UnderstandJavascript";
+import UnderstandingPrimitives from "./UnderstandingPrimitives/UnderstandPrimitives";
 
 export type BlogGridType = {
   title: string;
@@ -11,5 +11,5 @@ export const blogComponents: Record<
   string,
   React.FC<{ metadata: BlogGridType }>
 > = {
-  UnderstandingJavascript: UnderstandingJavascript,
+  UnderstandingPrimitives: UnderstandingPrimitives,
 };
