@@ -33,6 +33,6 @@
     "app/types/**/*.d.ts",
     "next-env.d.ts",
     "app"
-  ],
+, "src/constants.js"  ],
   "exclude": ["node_modules"]
 }
