@@ -1,11 +1,8 @@
 import styles from "./UnderstandJavascript.module.css";
 import { format } from "date-fns";
 import { BlogGridType } from "../index";
-import { Sandpack } from "@codesandbox/sandpack-react";
-import { amethyst } from "@codesandbox/sandpack-themes";
 import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
 import Link from "next/link";
-import Image from "next/image";
 import Video from "@/components/Video/Video";
 
 type Props = {
@@ -47,8 +44,6 @@ console.log(typeof(null));
 console.log(typeof(true));
 console.log(typeof("hello"));
 console.log(typeof(2));
-console.log(typeof(undefined));
-console.log(typeof(undefined));
 `;
 
   let ans2 = `
@@ -73,9 +68,9 @@ let a = 5;
 
       <div className={styles.content}>
         <p>
-          Recently, I took a $100 JavaScript course called{" "}
+          Recently, I took a 100 dollar JavaScript course called{" "}
           <a href="https://justjavascript.com/" target="_blank">
-            Just-JavaScript.
+            Just JavaScript.
           </a>
         </p>
         <p>
@@ -83,20 +78,20 @@ let a = 5;
           <a href="https://overreacted.io/" target="_blank">
             Dan Abramov
           </a>
-          , a member of the React team and co-author of Redux and Create React
+          , a member of the React team and co author of Redux and Create React
           App.
         </p>
         <p>
-          As the name suggests, <em>it's really just JavaScript</em>. But oh boy
-          does it teach you JavaScript✨
+          As the name suggests, <em>it is really just JavaScript</em>. But it
+          teaches you JavaScript extremely well.
         </p>
         <p>
-          The course starts by completely shattering your mental model of
-          JavaScript, then slowly rebuilds it by explaining the *why* behind
+          The course begins by completely breaking your mental model of
+          JavaScript, then slowly rebuilding it by explaining the reason behind
           everything. It fundamentally changes how you think about even the
           smallest aspects of the language.
         </p>
-        <p>Take this example for a moment:</p>
+        <p>Take this example for a moment.</p>
         <CodeSnippet lang="js">{code1}</CodeSnippet>
         <p>
           What do you think will be logged here? Take a moment to think about it
@@ -107,16 +102,16 @@ let a = 5;
           placeholder="Think and write your answer here..."
           maxLength={200}
         ></textarea>
-        <p>Drumroll... 🥁🥁🥁🥁🥁</p>
         <h1>Solution</h1>
+        <p>Drumroll please🥁🥁🥁🥁</p>
         <CodeSnippet lang="js">{ans1}</CodeSnippet>
         <p>
-          If you’ve been working with JavaScript for a while, you might not find
-          it surprising. But if you’re completely baffled like I was, keep
-          reading 👇
+          If you have been working with JavaScript for a while, you might not
+          find it surprising. But if you are completely confused like I was,
+          keep reading.
         </p>
         <p>False? But how?</p>
-        <p>This is how I initially thought about it:</p>
+        <p>This is how I initially thought about it.</p>
         <CodeSnippet lang="js">{`
 /* 
  we have: y = {}
@@ -128,17 +123,18 @@ y === {} // true?`}</CodeSnippet>
         <CodeSnippet lang="js">{`y === {} // false`}</CodeSnippet>
         <p>How does that make any sense?</p>
         <p>
-          It turns out I was wrong. There’s something deeper going on here. To
-          understand it, we first need to clear up the basics and establish some
-          common ground. We’ll circle back to this later.
+          It turns out I was mistaken. There is something deeper happening here.
+          To understand it, we first need to clear up the basics and establish
+          some common ground. We will circle back to this later.
         </p>
         <h1>The Basics</h1>
-        <p>Do me a favor and log these values in your browser console:</p>
+        <p>Do me a favor and log these values in your browser console.</p>
         <CodeSnippet lang="js">{code2}</CodeSnippet>
         <p>
-          I will share the results below, but trust me you’ll learn much more if
-          you try it yourself 🙂
+          I will share the results below, but trust me you will learn much more
+          if you try it yourself.
         </p>
+        <p>Done? Here are the logs.</p>
         <CodeSnippet lang="js">{ans2}</CodeSnippet>
         <p>"Wait… what? null is of type object?"</p>
         <p>
@@ -150,20 +146,26 @@ y === {} // true?`}</CodeSnippet>
           >
             bug
           </Link>{" "}
-          🐛 that was accidentally introduced into JavaScript. Unfortunately, it
-          can’t be fixed because it would break all the existing code.
+          that was accidentally introduced into JavaScript. Unfortunately, it
+          cannot be fixed because it would break existing code.
         </p>
         <p>And this gives us our first insight.</p>
         <p>
-          There are 7 primitive values in JavaScript. Just like there are 7
-          wonders of the world, 7 seas, 7 colors of the rainbow, 7 continents,
-          and 7 days of the week. Of course it had to be the damn number 7.
+          Modern JavaScript has seven primitive types: undefined, null, boolean,
+          number, string, bigint, and symbol.
         </p>
         <p>
-          The remaining two (BigInts and Symbols) exist but are rarely used.
+          Just like there are seven wonders of the world, seven seas, seven
+          colors of the rainbow, seven continents, and seven days of the week.
+          Of course it had to be the number seven.
         </p>
+        <p>
+          The remaining two, BigInts and Symbols, exist but are rarely used so
+          will not be in the spotlight. I will talk about them in future posts.
+        </p>
+
         <h1>Primitive Values</h1>
-        <p>Aight! Here’s the full list:</p>
+        <p>Here is the full list.</p>
         <ul>
           <li>
             <p>
@@ -182,12 +184,12 @@ y === {} // true?`}</CodeSnippet>
           </li>
           <li>
             <p>
-              <b>Numbers</b> (-100, 3.14, etc.), mathematical calculations.
+              <b>Numbers</b> numerical values for mathematical calculations.
             </p>
           </li>
           <li>
             <p>
-              <b>Strings</b> ("hello", "abracadabra"), text values.
+              <b>Strings</b> text values.
             </p>
           </li>
           <li>
@@ -197,64 +199,47 @@ y === {} // true?`}</CodeSnippet>
           </li>
           <li>
             <p>
-              <b>Symbols</b> uncommon, used to perform black magic and hide
-              secrets.
+              <b>Symbols</b> uncommon, used to hide internal implementation
+              details.
             </p>
           </li>
         </ul>
-        {/* TODO: Add an info note here explaining that using undefined vs null 
-        for intentional vs unintentional missing values is community convention, 
-        not a strict rule. */}
+
         <h1>Objects and Functions</h1>
         <ul>
           <li>
             <p>
-              <b>Objects</b> ({"{}"} and others), used to group related data and
-              code.
+              <b>Objects</b> used to group related data and code.
             </p>
           </li>
-
           <li>
             <p>
-              <b>Functions</b>
-              {` (x => x * 2, etc.), references to code.`}
+              <b>Functions</b> references to executable code.
             </p>
             <p>
-              If you’re wondering, “What about arrays and all that stuff?” It’s
-              because everything else in JavaScript is basically an ✨
-              <b>
-                <em>object</em>
-              </b>
-              ✨
+              If you are wondering “What about arrays and all that stuff?” the
+              answer is that almost everything else in JavaScript is an object.
             </p>
-            <p>
-              Well, maybe not{" "}
-              <a
-                href="https://stackoverflow.com/questions/9108925/how-is-almost-everything-in-javascript-an-object"
-                target="_blank"
-              >
-                literally
-              </a>{" "}
-              everything, but *almost* everything.
-            </p>
+            <p>Well, maybe not literally everything, but almost everything.</p>
           </li>
         </ul>
-        <h1>Creating a Mental Model - Variables mean Wires</h1>
+
+        <h1>Creating a Mental Model. Variables mean Wires</h1>
         <p>
-          Okay, that was a lot of nerdy stuff. Now let's get some intuition for
-          it and develop a mental model.
+          That was a lot of information. Now let us build intuition and develop
+          a mental model.
         </p>
         <p>
-          Yes, *varibles are wires*. To be more precise, they point to a value
-          in memory. You can think of variables as wires that are attached to a
+          Variables behave like wires. More precisely, they point to a value in
+          memory. You can think of variables as wires that are attached to a
           value.
         </p>
-        {/* <Image src="/1.png" width={500} height={250} alt="Varible is a Wire." /> */}
+
         <p>
-          Instead of remebering where a value is stored, you can refer to it
-          with that variable.
+          Instead of remembering where a value is stored, you can refer to it
+          with the variable.
         </p>
-        <p>For example, take this simple piece of code</p>
+        <p>For example, take this simple piece of code.</p>
         <CodeSnippet lang="js">{code3}</CodeSnippet>
         <Video
           desc="Variables are wires"
@@ -264,36 +249,37 @@ y === {} // true?`}</CodeSnippet>
           loop
           muted
         />
-        <p>Javascript does few things under the hood</p>
+        <p>JavaScript does a few things under the hood.</p>
         <ul>
           <li>
-            <p>First, it creates variables called 'a'</p>
+            <p>First, it creates a variable called a.</p>
           </li>
           <li>
             <p>
-              Then, it takes the value 5 and attaches it to the variable 'a'.
-              Technically speaking, it stores a reference for value 5 inside
-              variable 'a'.
+              Then it takes the value five and attaches it to the variable a.
+              Technically speaking, it stores a reference to the value five
+              inside the variable a.
             </p>
           </li>
           <li>
             <p>
-              Now, the next time we go to 'a' and ask what value it holds, it
-              will send us off to that value.
+              The next time we access a and ask for its value, it will direct us
+              to that value.
             </p>
           </li>
           <li>
             <p>
-              So, the important to note here is that value 5 is NOT, stored
-              inside variable 'a', it is just a reference to that variable. THIS
+              The important point here is that the value five is not stored
+              inside the variable a. The variable only holds a reference. This
               is very important.
             </p>
           </li>
         </ul>
-        <p>So what happens when we do this</p>
+
+        <p>So what happens when we do this.</p>
         <CodeSnippet lang="js">{`let a = 5;
 let b = 5;`}</CodeSnippet>
-        <p> Think for a while. Then see the solution.</p>
+        <p>Think for a moment, then see the solution.</p>
         <Video
           desc="Variables are wires"
           src="/clip_2.mp4"
@@ -302,66 +288,66 @@ let b = 5;`}</CodeSnippet>
           loop
           muted
         />
-        {/*TODO: Draw a animation for the above code.*/}
+
         <p>
-          Shocked? I was for sure. This was my aha moment with this topic.
-          Javascript can just have one primitive value and it reuses that value
-          in multiple places. Everything makes sense now.
+          Surprising right? This was my aha moment. JavaScript can reuse the
+          same primitive value across multiple variables. Everything begins to
+          make sense now.
         </p>
+
         <h1>Using the Mental Model</h1>
-        <p>"Now, what do we do with all this information?" you might ask.</p>
-        <p>Do you remeber this example at the very start</p>
+        <p>You may ask “What do we do with this information?”</p>
+        <p>Remember the first example.</p>
         <CodeSnippet lang="js">{ans1}</CodeSnippet>
+
         <p>
-          We have the concepts to understand it now. Let's break the code into
-          smaller chunks and digest it one by one.
+          We now have the concepts to understand it. Let us break it into
+          smaller parts and understand each piece.
         </p>
-        <CodeSnippet lang="js">{`let x //declare a variable called 'x'`}</CodeSnippet>
-        <CodeSnippet lang="js">{`let x = "One" //wire up that varible to a string value called "One"`}</CodeSnippet>
-        <CodeSnippet lang="js">{`let y //declare a second variable called 'y'`}</CodeSnippet>
-        <CodeSnippet lang="js">{`let y = {} //wire up that varible to an empty object {}`}</CodeSnippet>
+        <CodeSnippet lang="js">{`let x //declare a variable called x`}</CodeSnippet>
+        <CodeSnippet lang="js">{`let x = "One" //attach that variable to a string value called One`}</CodeSnippet>
+        <CodeSnippet lang="js">{`let y //declare a second variable called y`}</CodeSnippet>
+        <CodeSnippet lang="js">{`let y = {} //attach that variable to an empty object`}</CodeSnippet>
         <p>Did you notice a difference?</p>
         <p>
-          One is a primitive value("One") and the other is not({"{}"}). That's
-          the key.
+          One is a primitive value and the other is not. That is the crucial
+          point.
         </p>
-        <p>"How does that make any difference?" you might ask.</p>
+        <p>You may ask “How does that make any difference?”</p>
         <p>
-          The difference lies in how they are referenced. When you refer to a
-          "Primitive value", say a string("One"). Javascript can only have one
-          string "One", there cannot be two "One". Never.
+          The difference lies in how references are stored. When you refer to a
+          primitive value, for example the string One, JavaScript has only one
+          copy of that string. There cannot be two separate values that both
+          literally represent One.
         </p>
-        <p>Not convinced? I can prove it.</p>
-        <p>Look at this code</p>
+
+        <p>Not convinced? Here is proof.</p>
         <CodeSnippet lang="js">{`let str = "idea";
 str[0] = '1';
 console.log(str); // ??`}</CodeSnippet>
-        <p>What will be the value of the log statement?</p>
-        <p>Think about it and then see the solution.</p>
+        <p>Think about it, then check the result.</p>
         <CodeSnippet lang="js">{`let str = "idea";
 str[0] = '1';
 console.log(str); // "idea"`}</CodeSnippet>
         <p>
-          This will print "idea" or throw an error if you are in strict mode.
+          This prints idea or throws an error in strict mode. You might think
+          that if we can access characters of a string like an array, then we
+          should be able to modify them. Right?
         </p>
         <p>
-          You might fall into trap that if we can access values of string like
-          an array ( str[0] ) then surely we can change them as well. right?
-        </p>
-        <p>
-          We can't. Because it's a <em>primivite value</em>. Javascript will
-          never let us change a primivite value.{" "}
+          We cannot, because it is a primitive value. JavaScript will never
+          allow us to change a primitive value.{" "}
           <b className={styles.special}>
-            Primitive values are unique and immutable
+            Primitive values are immutable and compared by value.
           </b>{" "}
-          There cannot be any duplicates and they cannot change.
+          They cannot change and cannot have duplicates.
         </p>
 
         <h1>Objects</h1>
-        <p>So what happends when we do this.</p>
+        <p>So what happens when we do this.</p>
         <CodeSnippet lang="js">{`let a = {};
 let b = {};`}</CodeSnippet>
-        <p>Tinker, and see the solution.</p>
+        <p>Think and experiment with it, then see the solution.</p>
         <Video
           desc="Variables are wires"
           src="/clip_3.mp4"
@@ -371,61 +357,78 @@ let b = {};`}</CodeSnippet>
           muted
         />
         <p>
-          strange right? Why did it not reference the same object? Why create a
-          whole new empty object to refer to the same thing?
+          Strange right? Why does it not reference the same object? Why create a
+          new object?
         </p>
         <p>
-          Well, you see. Objects have a{" "}
-          <b className={styles.special}>special status</b>✨ in javascript.
+          This is because objects have a{" "}
+          <b className={styles.special}>special status</b> in JavaScript.
         </p>
         <p>
-          Everytime you declare an empty object,{" "}
-          <em>
-            <b className={styles.special}>
-              A new object reference is created for it.
-            </b>
-          </em>
+          Each time you create an empty object,{" "}
+          <b className={styles.special}>
+            a completely new reference is created
+          </b>
+          .
         </p>
         <p>
-          On further thought, it does make sense. Objects, after all will hold
-          different properties and have their own context.
+          When you think about it, this makes sense. Objects hold properties and
+          represent their own context.
         </p>
-        <p>That' why can do this</p>
-        <p>Let's hammer in the topic with illustrations.</p>
+        <p>That is why we can do this.</p>
         <CodeSnippet lang="js">{`let obj1 = {name: 'sajan'};
 let obj2 = {name: 'joy'};
 console.log(obj1.name);
 console.log(obj2.name);`}</CodeSnippet>
         <p>
-          If all objects were attached to a single empty object, that would
-          cause name clashes.
+          If all objects were attached to the same reference, property values
+          would clash instantly.
         </p>
-        <p>
-          So now, at last, we can circle back to the example we saw in the
-          beginning.
-        </p>
+
+        <p>Now we can finally return to the example from the beginning.</p>
+
         <CodeSnippet lang="js">{ans1}</CodeSnippet>
+
         <p>
-          The '===' operator checks for references in javascript not literal
-          values. It does not care if a '5' = '5' or {`{}`} is the same as{" "}
-          {`{}`}. All it cares for is if those values have the same reference.
+          The triple-equals operator (===) compares primitive values by value
+          and compares objects by reference. For primitives, JavaScript checks
+          whether the actual values are the same. But for objects, it only
+          checks whether both variables point to the exact same object in memory
+          — not whether the objects contain the same properties or “look”
+          identical.{" "}
         </p>
+
+        <p>With this understanding, we can determine the results easily.</p>
+
         <p>
-          So using this information. We can now easily determine the results.
-        </p>
-        <p>
-          Since a string is primitive value, it will have the same reference.
-          Therefore,
+          Since a string is a primitive value, It will be compared by value.
+          Therefore:
         </p>
         <CodeSnippet lang="js">{`let x = "One"; 
 console.log(x === "One"); //true`}</CodeSnippet>
+
         <p>
-          But objects are special and a new instance is created every time for
-          them. When comparing {`{}`} with y results in different references.
-          Which gives us.
+          But objects are special and a new instance is created each time. They
+          are compared with reference. A object y which is equal to an object (
+          {`{}`}) will not equal to another empty object ({`{}`}) because they
+          different references. So That gives us:
         </p>
         <CodeSnippet lang="js">{`let y = {};
-console.log(y === {});`}</CodeSnippet>
+console.log(y === {}); //false`}</CodeSnippet>
+        <p>
+          I hope I was able to clarify a few things. This is just a small
+          fraction of what the course teaches you about JavaScript.
+        </p>
+        <p>
+          That said, the course is quite short and doesn’t cover the entirety of
+          JavaScript. It mainly focuses on primitives and objects, and you can
+          finish it in just a few hours.
+        </p>
+        <p>
+          I would recommend this course only if you already have a solid
+          foundation and want to dig deeper into the language.
+        </p>
+        <p>See you in my next blog 😄✌️</p>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-export const BLOG_TITLE = "Bits & Bytes";
+export const BLOG_TITLE = "Blog";
 export const COLOR_THEME_COOKIE_NAME = "color-theme";
 
 export const LIGHT_COLORS = {
@@ -26,6 +26,7 @@ export const LIGHT_COLORS = {
   "--color-gray-700": "hsl(50deg 10% 25%)",
   "--color-gray-900": "hsl(50deg 20% 10%)",
   "--color-gray-1000": "black",
+  "--color-link-underline": "#ed9b96",
 };
 
 export const DARK_COLORS = {
@@ -53,6 +54,8 @@ export const DARK_COLORS = {
   "--color-gray-700": "hsl(256deg 10% 75%)",
   "--color-gray-900": "hsl(256deg 20% 90%)",
   "--color-gray-1000": "white",
+  "--color-link-underline": "#ffd500",
+  "--color-grid-background": "black",
 };
 
 // Add in semantic / special colors
@@ -90,6 +93,8 @@ export const RETRO_COLORS = {
   "--color-page-background": "hsl(48deg 48% 83%)", // base-100
   "--color-card-background": "hsl(48deg 48% 83%)",
   "--color-card-border": "transparent",
+  "--color-link-underline": "#ed9b96",
+  "--color-grid-background": "#F8F0E3",
 
   // PRIMARY (ef9995)
   "--color-primary-100": "hsl(3deg 71% 94%)",
